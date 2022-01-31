@@ -69,7 +69,9 @@ list.onclick = function (e) {
 
     // cambiar color del elemento seleccionado
     if (event.target.tagName === "LI") {
-        list.querySelectorAll("li").forEach(el => el.classList.remove("alert", "alert-success")); //se agregan clase de bootstarp para los elementos
+        list.querySelectorAll("li").forEach((el) =>
+            el.classList.remove("alert", "alert-success")
+        ); //se agregan clase de bootstarp para los elementos
         items[index].classList.add("alert", "alert-success");
     }
 };
@@ -88,11 +90,56 @@ removeItem.addEventListener("click", () => {
     showDiv.appendChild(divAlert);
 
     hideAlert();
-    
+
     function hideAlert() {
         setTimeout(() => {
-            divAlert.removeChild(label)
+            divAlert.removeChild(label);
             divAlert.classList.remove("alert", "alert-danger");
         }, 1000);
     }
+});
+const vm = Vue.createApp({
+    data() {
+        return {
+            students: `<strong>
+                        <h2>Estudiante 1</h2>
+                        <h2>Estudiante 2</h2>
+                        <h2>Estudiante 3</h2>
+                        <h2>Estudiante 4</h2>
+                    </strong>`,
+        };
+    },
+}).mount("#students");
+
+//array de mascotas
+const mascotas = [
+    {
+        nombre: "Coco",
+        edad: 2,
+    },
+    {
+        nombre: "Thor",
+        edad: 7,
+    },
+    {
+        nombre: "Max",
+        edad: 12,
+    },
+    {
+        nombre: "Leo",
+        edad: 9,
+    },
+    {
+        nombre: "Rocky",
+        edad: 10,
+    },
+    {
+        nombre: "Simba",
+        edad: 8,
+    },
+];
+
+let divMascotas = document.querySelector('#mascotas ul')
+mascotas.forEach(element => {
+    divMascotas.innerHTML += `<li>Nombre: <strong>${element.nombre}</strong>; Edad: <strong>${element.edad}</strong></li>`
 });

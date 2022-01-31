@@ -87,8 +87,12 @@ removeItem.addEventListener("click", () => {
     divAlert.appendChild(label);
     showDiv.appendChild(divAlert);
 
-    let identificadorTiempo;
-    function temporizador() {
-        identificadorTiempo = setTimeout(divAlert, 3000);
+    hideAlert();
+    
+    function hideAlert() {
+        setTimeout(() => {
+            divAlert.removeChild(label)
+            divAlert.classList.remove("alert", "alert-danger");
+        }, 1000);
     }
 });

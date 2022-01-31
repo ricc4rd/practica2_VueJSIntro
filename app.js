@@ -92,10 +92,6 @@ removeItem.addEventListener('click', () =>{
     showDiv.appendChild(divAlert);
     
 
-    let identificadorTiempo;
-    function temporizador (){
-        identificadorTiempo = setTimeout(divAlert, 3000);
-    }
     
 
 });

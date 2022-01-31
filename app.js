@@ -102,10 +102,8 @@ const vm = Vue.createApp({
     data() {
         return {
             students: `<strong>
-                        <h2>Estudiante 1</h2>
-                        <h2>Estudiante 2</h2>
-                        <h2>Estudiante 3</h2>
-                        <h2>Estudiante 4</h2>
+                        <h2>Isaias Segovia</h2>
+                        <h2>Ricardo Menjivar</h2>
                     </strong>`,
         };
     },

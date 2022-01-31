@@ -16,14 +16,13 @@
         <h1>Ejemplo Javascrtipt </h1>
         <div class="mb-3">
             <h2>Agregar elemento:</h2>
-            <input type="text" id="addItem" class="form-control">
-            <button id="addItemButton" class="btn btn-success">Add</button>
-            <button id="removeItemButton" class="btn btn-danger">Del Last</button>
-            <button id="removeItem" class="btn btn-danger">Del Selected</button>
+            <input type="text" id="addItem" class="form-control" placeholder="Agregar elemento">
+            <button id="addItemButton" class="btn btn-success mt-2">Add</button>
+            <button id="removeItemButton" class="btn btn-danger mt-2">Del Last</button>
+            <button id="removeItem" class="btn btn-danger mt-2">Del Selected</button>
         </div>
         <div class="mb-3">
-            <button id="hideElements" class="btn btn-secondary">
-                <<< /button>
+            <button id="hideElements" class="btn btn-secondary"><<</button>
         </div>
 
         <div class="mb-3" id="list">
@@ -37,11 +36,13 @@
             </div>
         </div>
 
-        <div id="students">
+        <!-- Nombre de los estudiantes -->
+        <div id="students" class="mt-5">
             <p><span v-html="students"></span></p>
         </div>
 
-        <div id="mascotas">
+        <!-- Array de mascotas -->
+        <div id="mascotas" class="mt-5">
             <ul>
                 
             </ul>
